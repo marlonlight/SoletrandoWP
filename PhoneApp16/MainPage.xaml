@@ -1,0 +1,99 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp16.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="#FFE5E51D">
+        <Image Name="imgLapis" Source="/Assets/lapis.png" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,13,0,0" Tap="imgLapis_Tap"/>
+        <Image Name="imgCaneta" Visibility="Collapsed" Source="/Assets/Caneta.png" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,13,0,0" Tap="imgCaneta_Tap"/>
+        <Image Name="imgCanetaPB" Visibility="Visible" Source="/Assets/CanetaPB.png" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,13,0,0" Tap="imgCanetaPB_Tap"/>
+        <Image Name="imgDiploma" Visibility="Collapsed" Source="/Assets/diploma.png" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="190,13,0,0" Tap="imgDiploma_Tap"/>
+        <Image Name="imgDiplomaPB" Visibility="Visible" Source="/Assets/diplomaPB.png" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="190,13,0,0" Tap="imgDiplomaPB_Tap"/>
+        <Image Name="imgChapeu" Visibility="Collapsed" Source="/Assets/chapeu.png" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,13,0,0" Tap="imgChapeu_Tap"/>
+        <Image Name="imgChapeuPB" Visibility="Visible" Source="/Assets/chapeuPB.png" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,13,0,0" Tap="imgChapeuPB_Tap"/>
+        <Image Name="imgPHD" Visibility="Collapsed" Source="/Assets/phd.png" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,21,0,0" Tap="imgPHD_Tap"/>
+        <Image Name="imgPHDPB" Visibility="Visible" Source="/Assets/phdPB.png" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,21,0,0" Tap="imgPHDPB_Tap"/>
+
+        <TextBlock Name="tbNotaAzul" Visibility="Collapsed" Text="" Foreground="#FF0F17C9" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,400,0" />
+        <TextBlock Name="tbNotaVermelha" Visibility="Collapsed" Text="" Foreground="#FFB84242" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,310,0" />
+
+        <TextBlock Name="tbNotaFundamental" Text="" Foreground="#FF0F17C9" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,70,400,0" />
+        <TextBlock Name="tbNotaMedio" Text="" Foreground="#FF0F17C9" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="110,70,310,0" />
+        <TextBlock Name="tbNotaGraduacao" Text="" Foreground="#FFB11710" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="200,70,220,0" />
+        <TextBlock Name="tbNotaMestrado" Text="" Foreground="#FF0F17C9" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="275,70,110,0" />
+        <TextBlock Name="tbNotaDoutorado" Text="" Foreground="#FF0F17C9" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="372,70,20,0" />
+        
+        <Image Source="/Assets/caderno.png" Width="480" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,390,0,-80"/>
+        
+        <Image Source="Assets/quadroNegro.jpg" VerticalAlignment="Top" Height="320" HorizontalAlignment="Center" Margin=" 0,120,0,0"/>
+        <TextBlock Text="Acertos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,138,0,0" FontSize="25" FontFamily="Segoe UI"/>
+        <TextBlock Text="Palavra" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,138,00,0" FontSize="25" FontFamily="Segoe UI"/>
+        <TextBlock Text="Tempo" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,138,20,0" FontSize="25"/>
+
+        <TextBlock Name="tbAcertos" Text="3" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" Width="80" Margin="20,165,0,0" FontSize="25" FontFamily="Segoe UI"/>
+        <TextBlock Name="tbTotalPalavras" Text="1/20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,165,00,0" FontSize="25" FontFamily="Segoe UI"/>
+        <TextBlock Name="tbTempo" Text="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,165,20,0" TextAlignment="Center" Width="70" FontSize="25" FontFamily="Segoe UI"/>
+
+        <TextBlock Name="tbPalavraDigitada" Text="" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,225,0,0" FontSize="40" FontFamily="Segoe UI"/>
+        <TextBlock Name="tbPalavraCorrigida" MaxWidth="450" TextWrapping="Wrap" Visibility="Collapsed" Text="" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,275,0,0" FontSize="40" FontFamily="Segoe UI" Foreground="#FFB84242"/>
+
+        <TextBlock Name="tbNivel" Text="Nível: Ensino Fundamental" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,360,0,0" FontSize="25" FontFamily="Segoe UI"/>
+        
+        <Image Name="imgCerto" Visibility="Collapsed" Source="Assets/certo2.png" Width="90" HorizontalAlignment="Right" Margin="0,310,20,0" VerticalAlignment="Top"/>
+        <Image Name="imgErrado" Visibility="Collapsed" Source="Assets/errado2.png" Height="80" HorizontalAlignment="Right" Margin="0,310,20,0" VerticalAlignment="Top"/>
+
+        <Image Name="imgPalavra" Source="/Assets/palavra2.png" Width="207" Margin="0,471,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="imgPalavra_Tap"/>
+        <Image Name="imgDica" Source="/Assets/dica2.png" Width="142" Margin="2,534,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="imgDica_Tap"/>
+        <Image Name="imgConfirmar"  Source="/Assets/confirmar2.png" Width="223" Margin="0,530,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Tap="imgConfirmar_Tap"/>
+        <Image Source="/Assets/estrela2.png" Width="112" Margin="0,462,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Tap="Image_Tap_1"/>
+
+        <Image Name="imgA" Source="/Assets/a.png" Width="50" Margin="2,600,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgB" Source="/Assets/b.png" Width="45" Margin="44,590,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgC" Source="/Assets/c.png" Width="50" Margin="86,600,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgCcedilha" Source="/Assets/Ccedilha.png" Width="45" Margin="135,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgD" Source="/Assets/d.png" Width="45" Margin="180,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgE" Source="/Assets/e.png" Width="45" Margin="220,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgF" Source="/Assets/f.png" Width="45" Margin="265,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgG" Source="/Assets/g.png" Width="45" Margin="310,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgH" Source="/Assets/h.png" Width="45" Margin="355,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgI" Source="/Assets/i.png" Width="45" Margin="395,585,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgJ" Source="/Assets/j.png" Width="45" Margin="430,585,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+
+        <Image Name="imgK" Source="/Assets/k.png" Width="45" Margin="2,655,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgL" Source="/Assets/l.png" Width="35" Margin="48,655,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgM" Source="/Assets/m.png" Width="60" Margin="82,675,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgN" Source="/Assets/n.png" Width="45" Margin="135,670,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgO" Source="/Assets/o.png" Width="45" Margin="182,670,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgP" Source="/Assets/p.png" Width="45" Margin="224,670,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgQ" Source="/Assets/q.png" Width="38" Margin="267,668,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgR" Source="/Assets/r.png" Width="50" Margin="305,668,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgS" Source="/Assets/s.png" Width="45" Margin="350,668,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgT" Source="/Assets/t.png" Width="35" Margin="390,668,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgU" Source="/Assets/u.png" Width="45" Margin="430,673,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+
+        <Image Name="imgV" Source="/Assets/v.png" Width="45" Margin="2,735,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgW" Source="/Assets/w.png" Width="55" Margin="48,735,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgX" Source="/Assets/x.png" Width="40" Margin="100,738,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgY" Source="/Assets/y.png" Width="40" Margin="143,738,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgZ" Source="/Assets/z.png" Width="40" Margin="190,738,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgAcentoAgudo" Source="/Assets/AcentoAgudo.png" Width="40" Margin="228,738,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgAcentoTio" Source="/Assets/AcentoTio.png" Width="45" Margin="272,738,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgAcentoCircunflexo" Source="/Assets/AcentoCircunflexo.png" Width="40" Margin="315,738,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgHifen" Source="/Assets/hifen.png" Width="45" Margin="355,738,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+        <Image Name="imgSeta" Source="/Assets/seta.png" Width="65" Margin="400,738,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Tap="Image_Tap"/>
+
+        <MediaElement Volume="100" x:Name="player" Width="50" Height="50" BufferingTime="0:0:5" Stretch="None"/>
+    </Grid>
+</phone:PhoneApplicationPage>

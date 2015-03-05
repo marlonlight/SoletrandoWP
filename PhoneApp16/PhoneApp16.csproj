@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F40C8522-3EA3-4EFB-9E15-0307E0C124C2}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhoneApp16</RootNamespace>
+    <AssemblyName>PhoneApp16</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>PhoneApp16_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>PhoneApp16.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="analytics.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="analytics.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\a.png" />
+    <Content Include="Assets\AcentoAgudo.png" />
+    <Content Include="Assets\AcentoCircunflexo.png" />
+    <Content Include="Assets\AcentoTio.png" />
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\audio\100fd.mp3" />
+    <Content Include="Assets\audio\100fp.mp3" />
+    <Content Include="Assets\audio\104fd.mp3" />
+    <Content Include="Assets\audio\104fp.mp3" />
+    <Content Include="Assets\audio\112fd.mp3" />
+    <Content Include="Assets\audio\112fp.mp3" />
+    <Content Include="Assets\audio\118fd.mp3" />
+    <Content Include="Assets\audio\118fp.mp3" />
+    <Content Include="Assets\audio\123fd.mp3" />
+    <Content Include="Assets\audio\123fp.mp3" />
+    <Content Include="Assets\audio\129fd.mp3" />
+    <Content Include="Assets\audio\129fp.mp3" />
+    <Content Include="Assets\audio\132fd.mp3" />
+    <Content Include="Assets\audio\132fp.mp3" />
+    <Content Include="Assets\audio\135fd.mp3" />
+    <Content Include="Assets\audio\135fp.mp3" />
+    <Content Include="Assets\audio\140fd.mp3" />
+    <Content Include="Assets\audio\140fp.mp3" />
+    <Content Include="Assets\audio\147fd.mp3" />
+    <Content Include="Assets\audio\147fp.mp3" />
+    <Content Include="Assets\audio\152fd.mp3" />
+    <Content Include="Assets\audio\152fp.mp3" />
+    <Content Include="Assets\audio\15fd.mp3" />
+    <Content Include="Assets\audio\15fp.mp3" />
+    <Content Include="Assets\audio\160fd.mp3" />
+    <Content Include="Assets\audio\160fp.mp3" />
+    <Content Include="Assets\audio\175fd.mp3" />
+    <Content Include="Assets\audio\175fp.mp3" />
+    <Content Include="Assets\audio\187fd.mp3" />
+    <Content Include="Assets\audio\187fp.mp3" />
+    <Content Include="Assets\audio\1fd.mp3" />
+    <Content Include="Assets\audio\1fp.mp3" />
+    <Content Include="Assets\audio\200fd.mp3" />
+    <Content Include="Assets\audio\200fp.mp3" />
+    <Content Include="Assets\audio\20fd.mp3" />
+    <Content Include="Assets\audio\20fp.mp3" />
+    <Content Include="Assets\audio\212fd.mp3" />
+    <Content Include="Assets\audio\212fp.mp3" />
+    <Content Include="Assets\audio\223fd.mp3" />
+    <Content Include="Assets\audio\223fp.mp3" />
+    <Content Include="Assets\audio\224fd.mp3" />
+    <Content Include="Assets\audio\224fp.mp3" />
+    <Content Include="Assets\audio\235fd.mp3" />
+    <Content Include="Assets\audio\235fp.mp3" />
+    <Content Include="Assets\audio\248fd.mp3" />
+    <Content Include="Assets\audio\248fp.mp3" />
+    <Content Include="Assets\audio\260fd.mp3" />
+    <Content Include="Assets\audio\260fp.mp3" />
+    <Content Include="Assets\audio\273fd.mp3" />
+    <Content Include="Assets\audio\273fp.mp3" />
+    <Content Include="Assets\audio\27fd.mp3" />
+    <Content Include="Assets\audio\27fp.mp3" />
+    <Content Include="Assets\audio\290fd.mp3" />
+    <Content Include="Assets\audio\290fp.mp3" />
+    <Content Include="Assets\audio\303fd.mp3" />
+    <Content Include="Assets\audio\303fp.mp3" />
+    <Content Include="Assets\audio\30fd.mp3" />
+    <Content Include="Assets\audio\30fp.mp3" />
+    <Content Include="Assets\audio\311fd.mp3" />
+    <Content Include="Assets\audio\311fp.mp3" />
+    <Content Include="Assets\audio\322fd.mp3" />
+    <Content Include="Assets\audio\322fp.mp3" />
+    <Content Include="Assets\audio\334fd.mp3" />
+    <Content Include="Assets\audio\334fp.mp3" />
+    <Content Include="Assets\audio\347fd.mp3" />
+    <Content Include="Assets\audio\347fp.mp3" />
+    <Content Include="Assets\audio\34fd.mp3" />
+    <Content Include="Assets\audio\34fp.mp3" />
+    <Content Include="Assets\audio\40fd.mp3" />
+    <Content Include="Assets\audio\40fp.mp3" />
+    <Content Include="Assets\audio\44fd.mp3" />
+    <Content Include="Assets\audio\44fp.mp3" />
+    <Content Include="Assets\audio\48fd.mp3" />
+    <Content Include="Assets\audio\48fp.mp3" />
+    <Content Include="Assets\audio\51fd.mp3" />
+    <Content Include="Assets\audio\51fp.mp3" />
+    <Content Include="Assets\audio\56fd.mp3" />
+    <Content Include="Assets\audio\56fp.mp3" />
+    <Content Include="Assets\audio\66fd.mp3" />
+    <Content Include="Assets\audio\66fp.mp3" />
+    <Content Include="Assets\audio\70fd.mp3" />
+    <Content Include="Assets\audio\70fp.mp3" />
+    <Content Include="Assets\audio\72fd.mp3" />
+    <Content Include="Assets\audio\72fp.mp3" />
+    <Content Include="Assets\audio\75fd.mp3" />
+    <Content Include="Assets\audio\75fp.mp3" />
+    <Content Include="Assets\audio\77fd.mp3" />
+    <Content Include="Assets\audio\77fp.mp3" />
+    <Content Include="Assets\audio\7fd.mp3" />
+    <Content Include="Assets\audio\7fp.mp3" />
+    <Content Include="Assets\audio\80fd.mp3" />
+    <Content Include="Assets\audio\80fp.mp3" />
+    <Content Include="Assets\audio\83fd.mp3" />
+    <Content Include="Assets\audio\83fp.mp3" />
+    <Content Include="Assets\audio\88fd.mp3" />
+    <Content Include="Assets\audio\88fp.mp3" />
+    <Content Include="Assets\audio\92fd.mp3" />
+    <Content Include="Assets\audio\92fp.mp3" />
+    <Content Include="Assets\audio\94fd.mp3" />
+    <Content Include="Assets\audio\94fp.mp3" />
+    <Content Include="Assets\audio\100md.mp3" />
+    <Content Include="Assets\audio\100mp.mp3" />
+    <Content Include="Assets\audio\112md.mp3" />
+    <Content Include="Assets\audio\112mp.mp3" />
+    <Content Include="Assets\audio\11md.mp3" />
+    <Content Include="Assets\audio\11mp.mp3" />
+    <Content Include="Assets\audio\124md.mp3" />
+    <Content Include="Assets\audio\124mp.mp3" />
+    <Content Include="Assets\audio\136md.mp3" />
+    <Content Include="Assets\audio\136mp.mp3" />
+    <Content Include="Assets\audio\148md.mp3" />
+    <Content Include="Assets\audio\148mp.mp3" />
+    <Content Include="Assets\audio\151md.mp3" />
+    <Content Include="Assets\audio\151mp.mp3" />
+    <Content Include="Assets\audio\154md.mp3" />
+    <Content Include="Assets\audio\154mp.mp3" />
+    <Content Include="Assets\audio\160md.mp3" />
+    <Content Include="Assets\audio\160mp.mp3" />
+    <Content Include="Assets\audio\16md.mp3" />
+    <Content Include="Assets\audio\16mp.mp3" />
+    <Content Include="Assets\audio\172md.mp3" />
+    <Content Include="Assets\audio\172mp.mp3" />
+    <Content Include="Assets\audio\184md.mp3" />
+    <Content Include="Assets\audio\184mp.mp3" />
+    <Content Include="Assets\audio\200md.mp3" />
+    <Content Include="Assets\audio\200mp.mp3" />
+    <Content Include="Assets\audio\209md.mp3" />
+    <Content Include="Assets\audio\209mp.mp3" />
+    <Content Include="Assets\audio\222md.mp3" />
+    <Content Include="Assets\audio\222mp.mp3" />
+    <Content Include="Assets\audio\235md.mp3" />
+    <Content Include="Assets\audio\235mp.mp3" />
+    <Content Include="Assets\audio\240md.mp3" />
+    <Content Include="Assets\audio\240mp.mp3" />
+    <Content Include="Assets\audio\248md.mp3" />
+    <Content Include="Assets\audio\248mp.mp3" />
+    <Content Include="Assets\audio\259md.mp3" />
+    <Content Include="Assets\audio\259mp.mp3" />
+    <Content Include="Assets\audio\271md.mp3" />
+    <Content Include="Assets\audio\271mp.mp3" />
+    <Content Include="Assets\audio\282md.mp3" />
+    <Content Include="Assets\audio\282mp.mp3" />
+    <Content Include="Assets\audio\287md.mp3" />
+    <Content Include="Assets\audio\287mp.mp3" />
+    <Content Include="Assets\audio\294md.mp3" />
+    <Content Include="Assets\audio\294mp.mp3" />
+    <Content Include="Assets\audio\306md.mp3" />
+    <Content Include="Assets\audio\306mp.mp3" />
+    <Content Include="Assets\audio\30md.mp3" />
+    <Content Include="Assets\audio\30mp.mp3" />
+    <Content Include="Assets\audio\317md.mp3" />
+    <Content Include="Assets\audio\317mp.mp3" />
+    <Content Include="Assets\audio\331md.mp3" />
+    <Content Include="Assets\audio\331mp.mp3" />
+    <Content Include="Assets\audio\342md.mp3" />
+    <Content Include="Assets\audio\342mp.mp3" />
+    <Content Include="Assets\audio\354md.mp3" />
+    <Content Include="Assets\audio\354mp.mp3" />
+    <Content Include="Assets\audio\366md.mp3" />
+    <Content Include="Assets\audio\366mp.mp3" />
+    <Content Include="Assets\audio\378md.mp3" />
+    <Content Include="Assets\audio\378mp.mp3" />
+    <Content Include="Assets\audio\383md.mp3" />
+    <Content Include="Assets\audio\383mp.mp3" />
+    <Content Include="Assets\audio\389md.mp3" />
+    <Content Include="Assets\audio\389mp.mp3" />
+    <Content Include="Assets\audio\394md.mp3" />
+    <Content Include="Assets\audio\394mp.mp3" />
+    <Content Include="Assets\audio\41md.mp3" />
+    <Content Include="Assets\audio\41mp.mp3" />
+    <Content Include="Assets\audio\4md.mp3" />
+    <Content Include="Assets\audio\4mp.mp3" />
+    <Content Include="Assets\audio\503md.mp3" />
+    <Content Include="Assets\audio\503mp.mp3" />
+    <Content Include="Assets\audio\516md.mp3" />
+    <Content Include="Assets\audio\516mp.mp3" />
+    <Content Include="Assets\audio\528md.mp3" />
+    <Content Include="Assets\audio\528mp.mp3" />
+    <Content Include="Assets\audio\53md.mp3" />
+    <Content Include="Assets\audio\53mp.mp3" />
+    <Content Include="Assets\audio\540md.mp3" />
+    <Content Include="Assets\audio\540mp.mp3" />
+    <Content Include="Assets\audio\552md.mp3" />
+    <Content Include="Assets\audio\552mp.mp3" />
+    <Content Include="Assets\audio\563md.mp3" />
+    <Content Include="Assets\audio\563mp.mp3" />
+    <Content Include="Assets\audio\576md.mp3" />
+    <Content Include="Assets\audio\576mp.mp3" />
+    <Content Include="Assets\audio\65md.mp3" />
+    <Content Include="Assets\audio\65mp.mp3" />
+    <Content Include="Assets\audio\71md.mp3" />
+    <Content Include="Assets\audio\71mp.mp3" />
+    <Content Include="Assets\audio\76md.mp3" />
+    <Content Include="Assets\audio\76mp.mp3" />
+    <Content Include="Assets\audio\80md.mp3" />
+    <Content Include="Assets\audio\80mp.mp3" />
+    <Content Include="Assets\audio\90md.mp3" />
+    <Content Include="Assets\audio\90mp.mp3" />
+    <Content Include="Assets\audio\94md.mp3" />
+    <Content Include="Assets\audio\94mp.mp3" />
+    <Content Include="Assets\audio\101dd.mp3" />
+    <Content Include="Assets\audio\101dp.mp3" />
+    <Content Include="Assets\audio\107dd.mp3" />
+    <Content Include="Assets\audio\107dp.mp3" />
+    <Content Include="Assets\audio\113dd.mp3" />
+    <Content Include="Assets\audio\113dp.mp3" />
+    <Content Include="Assets\audio\120dd.mp3" />
+    <Content Include="Assets\audio\120dp.mp3" />
+    <Content Include="Assets\audio\125dd.mp3" />
+    <Content Include="Assets\audio\125dp.mp3" />
+    <Content Include="Assets\audio\130dd.mp3" />
+    <Content Include="Assets\audio\130dp.mp3" />
+    <Content Include="Assets\audio\134dd.mp3" />
+    <Content Include="Assets\audio\134dp.mp3" />
+    <Content Include="Assets\audio\137dd.mp3" />
+    <Content Include="Assets\audio\137dp.mp3" />
+    <Content Include="Assets\audio\142dd.mp3" />
+    <Content Include="Assets\audio\142dp.mp3" />
+    <Content Include="Assets\audio\146dd.mp3" />
+    <Content Include="Assets\audio\146dp.mp3" />
+    <Content Include="Assets\audio\150dd.mp3" />
+    <Content Include="Assets\audio\150dp.mp3" />
+    <Content Include="Assets\audio\156dd.mp3" />
+    <Content Include="Assets\audio\156dp.mp3" />
+    <Content Include="Assets\audio\164dd.mp3" />
+    <Content Include="Assets\audio\164dp.mp3" />
+    <Content Include="Assets\audio\16dd.mp3" />
+    <Content Include="Assets\audio\16dp.mp3" />
+    <Content Include="Assets\audio\170dd.mp3" />
+    <Content Include="Assets\audio\170dp.mp3" />
+    <Content Include="Assets\audio\176dd.mp3" />
+    <Content Include="Assets\audio\176dp.mp3" />
+    <Content Include="Assets\audio\183dd.mp3" />
+    <Content Include="Assets\audio\183dp.mp3" />
+    <Content Include="Assets\audio\189dd.mp3" />
+    <Content Include="Assets\audio\189dp.mp3" />
+    <Content Include="Assets\audio\195dd.mp3" />
+    <Content Include="Assets\audio\195dp.mp3" />
+    <Content Include="Assets\audio\200dd.mp3" />
+    <Content Include="Assets\audio\200dp.mp3" />
+    <Content Include="Assets\audio\207dd.mp3" />
+    <Content Include="Assets\audio\207dp.mp3" />
+    <Content Include="Assets\audio\213dd.mp3" />
+    <Content Include="Assets\audio\213dp.mp3" />
+    <Content Include="Assets\audio\220dd.mp3" />
+    <Content Include="Assets\audio\220dp.mp3" />
+    <Content Include="Assets\audio\223dd.mp3" />
+    <Content Include="Assets\audio\223dp.mp3" />
+    <Content Include="Assets\audio\22dd.mp3" />
+    <Content Include="Assets\audio\22dp.mp3" />
+    <Content Include="Assets\audio\231dd.mp3" />
+    <Content Include="Assets\audio\231dp.mp3" />
+    <Content Include="Assets\audio\241dd.mp3" />
+    <Content Include="Assets\audio\241dp.mp3" />
+    <Content Include="Assets\audio\248dd.mp3" />
+    <Content Include="Assets\audio\248dp.mp3" />
+    <Content Include="Assets\audio\255dd.mp3" />
+    <Content Include="Assets\audio\255dp.mp3" />
+    <Content Include="Assets\audio\260dd.mp3" />
+    <Content Include="Assets\audio\260dp.mp3" />
+    <Content Include="Assets\audio\267dd.mp3" />
+    <Content Include="Assets\audio\267dp.mp3" />
+    <Content Include="Assets\audio\272dd.mp3" />
+    <Content Include="Assets\audio\272dp.mp3" />
+    <Content Include="Assets\audio\280dd.mp3" />
+    <Content Include="Assets\audio\280dp.mp3" />
+    <Content Include="Assets\audio\284dd.mp3" />
+    <Content Include="Assets\audio\284dp.mp3" />
+    <Content Include="Assets\audio\28dd.mp3" />
+    <Content Include="Assets\audio\28dp.mp3" />
+    <Content Include="Assets\audio\290dd.mp3" />
+    <Content Include="Assets\audio\290dp.mp3" />
+    <Content Include="Assets\audio\297dd.mp3" />
+    <Content Include="Assets\audio\297dp.mp3" />
+    <Content Include="Assets\audio\2dd.mp3" />
+    <Content Include="Assets\audio\2dp.mp3" />
+    <Content Include="Assets\audio\33dd.mp3" />
+    <Content Include="Assets\audio\33dp.mp3" />
+    <Content Include="Assets\audio\40dd.mp3" />
+    <Content Include="Assets\audio\40dp.mp3" />
+    <Content Include="Assets\audio\47dd.mp3" />
+    <Content Include="Assets\audio\47dp.mp3" />
+    <Content Include="Assets\audio\53dd.mp3" />
+    <Content Include="Assets\audio\53dp.mp3" />
+    <Content Include="Assets\audio\60dd.mp3" />
+    <Content Include="Assets\audio\60dp.mp3" />
+    <Content Include="Assets\audio\64dd.mp3" />
+    <Content Include="Assets\audio\64dp.mp3" />
+    <Content Include="Assets\audio\70dd.mp3" />
+    <Content Include="Assets\audio\70dp.mp3" />
+    <Content Include="Assets\audio\76dd.mp3" />
+    <Content Include="Assets\audio\76dp.mp3" />
+    <Content Include="Assets\audio\83dd.mp3" />
+    <Content Include="Assets\audio\83dp.mp3" />
+    <Content Include="Assets\audio\89dd.mp3" />
+    <Content Include="Assets\audio\89dp.mp3" />
+    <Content Include="Assets\audio\8dd.mp3" />
+    <Content Include="Assets\audio\8dp.mp3" />
+    <Content Include="Assets\audio\96dd.mp3" />
+    <Content Include="Assets\audio\96dp.mp3" />
+    <Content Include="Assets\audio\right.mp3" />
+    <Content Include="Assets\audio\tick.mp3" />
+    <Content Include="Assets\audio\wrong.mp3" />
+    <Content Include="Assets\b.png" />
+    <Content Include="Assets\c.png" />
+    <Content Include="Assets\caderno.png" />
+    <Content Include="Assets\Caneta.png" />
+    <Content Include="Assets\CanetaPB.png" />
+    <Content Include="Assets\Ccedilha.png" />
+    <Content Include="Assets\certo2.png" />
+    <Content Include="Assets\chapeu.png" />
+    <Content Include="Assets\chapeuPB.png" />
+    <Content Include="Assets\confirmar.png" />
+    <Content Include="Assets\confirmar2.png" />
+    <Content Include="Assets\d.png" />
+    <Content Include="Assets\dica.png" />
+    <Content Include="Assets\dica2.png" />
+    <Content Include="Assets\diploma.png" />
+    <Content Include="Assets\diplomaPB.png" />
+    <Content Include="Assets\e.png" />
+    <Content Include="Assets\errado2.png" />
+    <Content Include="Assets\estrela.png" />
+    <Content Include="Assets\estrela2.png" />
+    <Content Include="Assets\f.png" />
+    <Content Include="Assets\g.png" />
+    <Content Include="Assets\h.png" />
+    <Content Include="Assets\hifen.png" />
+    <Content Include="Assets\i.png" />
+    <Content Include="Assets\icon.png" />
+    <Content Include="Assets\j.png" />
+    <Content Include="Assets\k.png" />
+    <Content Include="Assets\l.png" />
+    <Content Include="Assets\lapis.png" />
+    <Content Include="Assets\m.png" />
+    <Content Include="Assets\n.png" />
+    <Content Include="Assets\o.png" />
+    <Content Include="Assets\p.png" />
+    <Content Include="Assets\palavra.png" />
+    <Content Include="Assets\palavra2.png" />
+    <Content Include="Assets\phd.png" />
+    <Content Include="Assets\phdPB.png" />
+    <Content Include="Assets\q.png" />
+    <Content Include="Assets\quadroNegro.jpg" />
+    <Content Include="Assets\r.png" />
+    <Content Include="Assets\regras.png" />
+    <Content Include="Assets\s.png" />
+    <Content Include="Assets\seta.png" />
+    <Content Include="Assets\t.png" />
+    <Content Include="Assets\tile.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\u.png" />
+    <Content Include="Assets\v.png" />
+    <Content Include="Assets\w.png" />
+    <Content Include="Assets\x.png" />
+    <Content Include="Assets\y.png" />
+    <Content Include="Assets\z.png" />
+    <Content Include="Data\license.xml" />
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GoogleAnalytics">
+      <HintPath>..\packages\GoogleAnalyticsSDK.1.2.08\lib\windowsphone8\GoogleAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleAnalytics.Core">
+      <HintPath>..\packages\GoogleAnalyticsSDK.1.2.08\lib\windowsphone8\GoogleAnalytics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.1.10\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.1.10\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.1.10\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>
